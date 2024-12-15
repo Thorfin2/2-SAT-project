@@ -8,9 +8,17 @@ def towSatToGraph(formul):
     g.add_edges(tmp)
     return g
 
-#prend deux graph et copier le premier (qui a des valeurs negatifs pour 
-#les sommets) dans le deuxieme on va l'utiliser pour l'algo de tarjan 
-#qui fonction que avec des sommets positifs
+
+
+"""
+'changeToPositif ': fonction qui change les signes des des sommets de ( - ) à ( + )
+Paramètres:
+-  : Graphe g 
+-  : Graphe f
+Fonctionalité  : copier le premier graphe g  (qui a des valeurs negatifs pour les sommets) dans le deuxieme graphe f 
+on va utiliser cette fonction  pour l'algo de tarjan qui fonctionne avec des sommets positifs 
+Sortie: void ( rien ) 
+"""
 def changeToPositif (g,f):
     ch = []
     for i in range(len(g.edges())):
