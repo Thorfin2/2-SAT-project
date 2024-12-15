@@ -13,8 +13,8 @@ def towSatToGraph(formul):
 """
 'changeToPositif ': fonction qui change les signes des des sommets de ( - ) à ( + )
 Paramètres:
--  : Graphe g 
--  : Graphe f
+- g : Graphe avec des sommets ( presence de signes negatifs possible)
+- f : Graphe ( eliminations des signes negatifs )
 Fonctionalité  : copier le premier graphe g  (qui a des valeurs negatifs pour les sommets) dans le deuxieme graphe f 
 on va utiliser cette fonction  pour l'algo de tarjan qui fonctionne avec des sommets positifs 
 Sortie: void ( rien ) 
