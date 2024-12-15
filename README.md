@@ -1,5 +1,5 @@
 # 2-SAT-project
-L3 info 
+L3 info : 
 NADER Fadi  |
 LETAIEF Ahmed Yahya  |
 ZNATA Mehdi
