@@ -1,7 +1,7 @@
 # 2-SAT-project
 L3 info 
-NADER Fadi|
-LETAIEF Ahmed Yahya|
+NADER Fadi  |
+LETAIEF Ahmed Yahya  |
 ZNATA Mehdi
 
 Questions:
