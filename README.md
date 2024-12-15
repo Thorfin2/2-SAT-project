@@ -16,3 +16,6 @@ construit le graphe orienté associé.
 Exercice 5: A partir du graphe construit à l’exercice précédent , implémentez
 l’algorithme de [1] qui d´etermine si la formule est valide ou pas. Si la formule
 est valide, la fonction renverra une aﬀectation.
+
+
+[TP-final.pdf](https://github.com/user-attachments/files/18141691/TP-final-2020.pdf)
