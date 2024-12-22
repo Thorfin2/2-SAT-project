@@ -47,9 +47,7 @@ def transformer_en_formule_sat(liste_2d):
 
     return formule
 
-
-def trouver_max(formule):
-    """
+"""
     Trouve la plus grande variable dans une formule 2-SAT.
 
     Paramètre :
@@ -57,7 +55,8 @@ def trouver_max(formule):
 
     Retourne :
         int : Plus grande valeur absolue parmi les littéraux.
-    """
+"""
+def trouver_max(formule):
     maximum = 0
     for clause in formule:
         grand = max(clause)
@@ -79,7 +78,7 @@ def trouver_max(formule):
 
     Retourne :
         bool : True si la formule est satisfiable, False sinon.
-    """
+"""
 def verifier_sat(formule, valeurs):
     if not verifier_formule(formule, valeurs):
         print("La formule est incorrecte.")
@@ -303,7 +302,7 @@ def tarjan(graphe):
 
     Retourne :
         bool : True si la formule est satisfiable, False sinon.
-    """
+"""
 def est_satisfiable(cfc):
     
     for composante in cfc:
@@ -322,7 +321,7 @@ def est_satisfiable(cfc):
 
     Retourne :
         list : Liste des valeurs assignées à chaque littéral (1 pour True, 0 pour False).
-    """
+"""
 def attribuer_valeurs(cfc):
     
     valeurs = []
