@@ -369,7 +369,7 @@ def tester_exo5():
         valeurs = attribuer_valeurs(cfc)
         print("Formule :", transformer_en_formule_sat(formule))
         print("Valeurs :", valeurs)
-        print("Résultat :", verifier_sat(formule, valeurs))
+        print("Résultat de verification de la satisfiabilité :")
         return verifier_sat(formule, valeurs)
 
     print("La formule n'est pas satisfiable.")
