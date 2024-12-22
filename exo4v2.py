@@ -42,7 +42,5 @@ if __name__ == "__main__":
     for edge in edges:
         print(f"{edge[0]} -> {edge[1]}")
 
-    # Sauvegarder et afficher le graphe
-    #graph.render("graph_2SAT", format="png", cleanup=True)
-    #print("Le graphe a été rendu dans le fichier 'graph_2SAT.png'.")
+    # Afficher le graphe
     graph.show()
