@@ -1,9 +1,11 @@
 # 2-SAT-project
 L3 info : 
-NADER Fadi  |
+NADER Fadi   |
 LETAIEF Ahmed Yahya  |
 ZNATA Mehdi
 
+Sujet :
+[TP-final.pdf](https://github.com/user-attachments/files/18141691/TP-final-2020.pdf)
 Questions:
 Exercice 1: Soit F une formule 2−Sat avec n variables. Quel est le nombre maximum de clauses que peut comporter F ?
 
@@ -122,20 +124,5 @@ Formule satisfiable avec les valeurs : [None, 1, 0, 1, 0]
 
 ---
 
-## Améliorations possibles
-
-1. **Optimisation des performances** :
-   - Réduire la complexité des fonctions en utilisant des structures comme les dictionnaires.
-
-2. **Tests unitaires** :
-   - Ajouter des tests pour vérifier les cas limites (formules triviales, non satisfiables, etc.).
-
-3. **Visualisation améliorée** :
-   - Utiliser des outils comme NetworkX pour afficher les graphes avec plus de flexibilité.
-
----
 
 ## Conclusion
-
-
-[TP-final.pdf](https://github.com/user-attachments/files/18141691/TP-final-2020.pdf)
