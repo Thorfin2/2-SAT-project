@@ -1,15 +1,17 @@
-def sommet(s):
-    """
+
+"""
     Convertit un entier en une lettre correspondante (a-z).
-    """
+"""
+def sommet(s):
+    
     if 1 <= s <= 26:
         return chr(s + 96)
     raise ValueError("Le sommet doit être entre 1 et 26.")
-
-def transforme(formule):
-    """
+"""
     Transforme une formule sous forme de liste 2D en une représentation textuelle de 2-SAT.
-    """
+"""
+def transforme(formule):
+    
     clauses = []
     for clause in formule:
         literals = []
@@ -21,16 +23,17 @@ def transforme(formule):
         clauses.append(f"({' | '.join(literals)})")
     return " & ".join(clauses)
 
-def SAT(formule, valeur):
-    """
+"""
     Évalue si une formule 2-SAT est vraie ou fausse pour une assignation donnée.
     Arguments :
         formule : liste 2D représentant les clauses.
         valeur : liste des valeurs assignées (1 pour vrai, 0 pour faux).
     Retourne :
         True si la formule est vraie, sinon False.
-    """
-    if not isFormul(formule, valeur):
+"""
+def SAT(formule, valeur):
+    
+    if not estFormule(formule, valeur):
         return False
 
     for clause in formule:
@@ -45,16 +48,17 @@ def SAT(formule, valeur):
 
     return True
 
-def Max(formule):
-    """
+"""
     Trouve la plus grande variable utilisée dans la formule.
-    """
+"""
+def Max(formule):
+   
     return max(abs(literal) for clause in formule for literal in clause)
-
-def isFormul(formule, valeur):
-    """
+"""
     Vérifie si la formule et l'assignation sont valides.
-    """
+"""
+def estFormule(formule, valeur):
+    
     max_var = Max(formule)
     if max_var >= len(valeur):
         print("Vous n'avez pas attribué une valeur à toutes les variables.")

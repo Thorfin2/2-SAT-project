@@ -1,7 +1,6 @@
 from graphviz import Digraph
 
-def towSatToGraph(formule):
-    """
+"""
     Convertit une formule 2-SAT en un graphe orienté.
 
     Arguments :
@@ -12,6 +11,7 @@ def towSatToGraph(formule):
         . -a → b
         . -b → a
     """
+def towSatToGraph(formule):
     edges = []
 
     for clause in formule:
