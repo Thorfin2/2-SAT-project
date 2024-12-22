@@ -1,4 +1,4 @@
-from graphviz import Digraph
+
 
 """
     Convertit une formule 2-SAT en un graphe orienté.
@@ -23,9 +23,9 @@ def towSatToGraph(formule):
         edges.append((-clause[1], clause[0]))  # -b → a
 
     # Créer un graphe orienté
-    graph = Digraph()
+    graph = DiGraph()
     for edge in edges:
-        graph.edge(f"x{abs(edge[0])}" + ("'" if edge[0] < 0 else ""),
+        graph.add_edge(f"x{abs(edge[0])}" + ("'" if edge[0] < 0 else ""),
                    f"x{abs(edge[1])}" + ("'" if edge[1] < 0 else ""))
 
     return graph, edges
@@ -43,5 +43,6 @@ if __name__ == "__main__":
         print(f"{edge[0]} -> {edge[1]}")
 
     # Sauvegarder et afficher le graphe
-    graph.render("graph_2SAT", format="png", cleanup=True)
-    print("Le graphe a été rendu dans le fichier 'graph_2SAT.png'.")
+    #graph.render("graph_2SAT", format="png", cleanup=True)
+    #print("Le graphe a été rendu dans le fichier 'graph_2SAT.png'.")
+    graph.show()
