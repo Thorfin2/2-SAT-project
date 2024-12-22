@@ -293,9 +293,7 @@ def attribuer_valeurs(cfc):
 
 
 
-
-def verifier_sat(formule, valeurs):
-    """
+"""
     Vérifie si une formule 2-SAT est satisfiable avec les valeurs données.
 
     Paramètres :
@@ -305,6 +303,7 @@ def verifier_sat(formule, valeurs):
     Retourne :
         bool : True si la formule est satisfiable, False sinon.
     """
+def verifier_sat(formule, valeurs):
     if not verifier_formule(formule, valeurs):
         print("La formule est incorrecte.")
         return formule, valeurs
@@ -333,10 +332,7 @@ def verifier_sat(formule, valeurs):
 
 
 
-
-
-def verifier_formule(formule, valeurs):
-    """
+"""
     Vérifie si la formule est bien formée et si toutes les variables ont une valeur attribuée.
 
     Paramètres :
@@ -345,7 +341,8 @@ def verifier_formule(formule, valeurs):
 
     Retourne :
         bool : True si la formule est correcte et toutes les variables ont une valeur, False sinon.
-    """
+"""
+def verifier_formule(formule, valeurs):
     if trouver_max(formule) >= len(valeurs):
         print("Vous n'avez pas attribué de valeur à toutes les variables.")
         return False
@@ -359,14 +356,13 @@ def verifier_formule(formule, valeurs):
 
     return True
 
-
-def tester_exo5():
-    """
+"""
     Teste le fonctionnement complet de la vérification de satisfiabilité pour une formule 2-SAT.
     
     Retourne :
         int : 1 si la formule est satisfiable, 0 sinon.
-    """
+"""
+def tester_exo5():
     graphe_initial = DiGraph()
     graphe_positif = DiGraph()
     formule = [[1, 2], [2, -3], [-2, -4], [2, 4], [4, 1]]
@@ -396,12 +392,7 @@ def tester_exo5():
     return 0
 
 
-
-
-
-
-
-#main
+#fonction main pour l'executions des differents exercices :
 if __name__ == "__main__":
     print( "\n---------------------------------------------exo3---------------------------------------------")
     formule = [[1, 2], [-1, -2]]
