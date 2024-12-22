@@ -124,17 +124,5 @@ Formule satisfiable avec les valeurs : [None, 1, 0, 1, 0]
 
 ---
 
-## Améliorations possibles
-
-1. **Optimisation des performances** :
-   - Réduire la complexité des fonctions en utilisant des structures comme les dictionnaires.
-
-2. **Tests unitaires** :
-   - Ajouter des tests pour vérifier les cas limites (formules triviales, non satisfiables, etc.).
-
-3. **Visualisation améliorée** :
-   - Utiliser des outils comme NetworkX pour afficher les graphes avec plus de flexibilité.
-
----
 
 ## Conclusion
