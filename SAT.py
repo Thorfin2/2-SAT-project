@@ -70,6 +70,69 @@ def trouver_max(formule):
 
 
 
+"""
+    Vérifie si une formule 2-SAT est satisfiable avec les valeurs données.
+
+    Paramètres :
+        formule (list) : Liste de clauses représentant une formule 2-SAT (chaque clause est une liste de deux littéraux).
+        valeurs (list) : Liste des valeurs attribuées à chaque littéral (1 pour True, 0 pour False).
+
+    Retourne :
+        bool : True si la formule est satisfiable, False sinon.
+    """
+def verifier_sat(formule, valeurs):
+    if not verifier_formule(formule, valeurs):
+        print("La formule est incorrecte.")
+        return formule, valeurs
+
+    resultat_global = True
+    temporaire = []
+    resultat_clause = True
+
+    for clause in formule:
+        for littéral in clause:
+            if littéral > 0:
+                temporaire.append(valeurs[littéral])
+            else:
+                temporaire.append(abs(valeurs[abs(littéral)] - 1))
+
+        for i in range(len(temporaire)):
+            if i == 0:
+                resultat_clause = temporaire[i]
+            else:
+                resultat_clause = resultat_clause or temporaire[i]
+
+        temporaire.clear()
+        resultat_global = resultat_global and resultat_clause
+
+    return resultat_global
+
+
+
+"""
+    Vérifie si la formule est bien formée et si toutes les variables ont une valeur attribuée.
+
+    Paramètres :
+        formule (list) : Liste de clauses représentant une formule 2-SAT.
+        valeurs (list) : Liste des valeurs attribuées aux littéraux.
+
+    Retourne :
+        bool : True si la formule est correcte et toutes les variables ont une valeur, False sinon.
+"""
+def verifier_formule(formule, valeurs):
+    if trouver_max(formule) >= len(valeurs):
+        print("Vous n'avez pas attribué de valeur à toutes les variables.")
+        return False
+
+    for clause in formule:
+        for littéral in clause:
+            if littéral > 0:
+                if valeurs[littéral] not in [0, 1]:
+                    print("Les variables doivent avoir des valeurs de 0 ou 1.")
+                    return False
+
+    return True
+
 #------------------------------------------------Exo4----------------------------------------------#
 
 """
@@ -85,8 +148,8 @@ def trouver_max(formule):
 def convertir_formule_en_graphe(formule):
     aretes = []
     for clause in formule:
-        aretes.append([-clause[0], clause[1]])  # ¬a -> b
-        aretes.append([-clause[1], clause[0]])  # ¬b -> a
+        aretes.append([-clause[0], clause[1]])  # -a -> b
+        aretes.append([-clause[1], clause[0]])  # -b -> a
 
     graphe = DiGraph()
     graphe.add_edges(aretes)
@@ -292,69 +355,6 @@ def attribuer_valeurs(cfc):
 
 
 
-
-"""
-    Vérifie si une formule 2-SAT est satisfiable avec les valeurs données.
-
-    Paramètres :
-        formule (list) : Liste de clauses représentant une formule 2-SAT (chaque clause est une liste de deux littéraux).
-        valeurs (list) : Liste des valeurs attribuées à chaque littéral (1 pour True, 0 pour False).
-
-    Retourne :
-        bool : True si la formule est satisfiable, False sinon.
-    """
-def verifier_sat(formule, valeurs):
-    if not verifier_formule(formule, valeurs):
-        print("La formule est incorrecte.")
-        return formule, valeurs
-
-    resultat_global = True
-    temporaire = []
-    resultat_clause = True
-
-    for clause in formule:
-        for littéral in clause:
-            if littéral > 0:
-                temporaire.append(valeurs[littéral])
-            else:
-                temporaire.append(abs(valeurs[abs(littéral)] - 1))
-
-        for i in range(len(temporaire)):
-            if i == 0:
-                resultat_clause = temporaire[i]
-            else:
-                resultat_clause = resultat_clause or temporaire[i]
-
-        temporaire.clear()
-        resultat_global = resultat_global and resultat_clause
-
-    return resultat_global
-
-
-
-"""
-    Vérifie si la formule est bien formée et si toutes les variables ont une valeur attribuée.
-
-    Paramètres :
-        formule (list) : Liste de clauses représentant une formule 2-SAT.
-        valeurs (list) : Liste des valeurs attribuées aux littéraux.
-
-    Retourne :
-        bool : True si la formule est correcte et toutes les variables ont une valeur, False sinon.
-"""
-def verifier_formule(formule, valeurs):
-    if trouver_max(formule) >= len(valeurs):
-        print("Vous n'avez pas attribué de valeur à toutes les variables.")
-        return False
-
-    for clause in formule:
-        for littéral in clause:
-            if littéral > 0:
-                if valeurs[littéral] not in [0, 1]:
-                    print("Les variables doivent avoir des valeurs de 0 ou 1.")
-                    return False
-
-    return True
 
 """
     Teste le fonctionnement complet de la vérification de satisfiabilité pour une formule 2-SAT.
