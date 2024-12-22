@@ -35,7 +35,7 @@ def changeToPositif (g,f):
             ch[i][j] += abs(x)
     f.add_edges(ch)
 
-#prend l,enseble des cfc et le graph principale(avec les valeur negatifs)
+#prend en parametre l'ensemble de cfc et le graphe principal(avec des valeurs negatifs)
 def changeEnsemble (l,g):
     ch = []
     for i in range(len(g.edges())):
