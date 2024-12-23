@@ -1,3 +1,7 @@
+#-----------------------------------------------Exo1&2---------------------------------------------#
+
+#voir Rapport
+
 #------------------------------------------------Exo3----------------------------------------------#
 
 """
@@ -7,7 +11,7 @@
         indice (int) : Entier entre 1 et 26.
 
     Retourne :
-        str : Lettre correspondante à l'indice (a pour 1, z pour 26).
+        String : Lettre correspondante à l'indice (a pour 1, z pour 26).
 """
 def convertir_en_lettre(indice):
     
@@ -20,10 +24,10 @@ def convertir_en_lettre(indice):
     Transforme une liste 2D représentant une formule 2-SAT en une chaîne lisible sous forme de formule logique.
 
     Paramètre :
-        liste_2d (list) : Liste 2D où chaque sous-liste représente une clause (ex : [[1, 2], [1, -2]]).
+        liste_2d (liste) : Liste 2D où chaque sous-liste représente une clause (ex : [[1, 2], [1, -2]]).
 
     Retourne :
-        str : Formule SAT sous forme de chaîne (ex : "(a|b)&(a|!b)").
+        String : Formule SAT sous forme de chaîne (ex : "(a|b)&(a|!b)").
 """
 def transformer_en_formule_sat(liste_2d):
     formule = ""
@@ -51,7 +55,7 @@ def transformer_en_formule_sat(liste_2d):
     Trouve la plus grande variable dans une formule 2-SAT.
 
     Paramètre :
-        formule (list) : Liste de clauses représentant une formule 2-SAT.
+        formule (liste) : Liste de clauses représentant une formule 2-SAT.
 
     Retourne :
         int : Plus grande valeur absolue parmi les littéraux.
@@ -73,8 +77,8 @@ def trouver_max(formule):
     Vérifie si une formule 2-SAT est satisfiable avec les valeurs données.
 
     Paramètres :
-        formule (list) : Liste de clauses représentant une formule 2-SAT (chaque clause est une liste de deux littéraux).
-        valeurs (list) : Liste des valeurs attribuées à chaque littéral (1 pour True, 0 pour False).
+        formule (liste) : Liste de clauses représentant une formule 2-SAT (chaque clause est une liste de deux littéraux).
+        valeurs (liste) : Liste des valeurs attribuées à chaque littéral (1 pour True, 0 pour False).
 
     Retourne :
         bool : True si la formule est satisfiable, False sinon.
@@ -112,8 +116,8 @@ def verifier_sat(formule, valeurs):
     Vérifie si la formule est bien formée et si toutes les variables ont une valeur attribuée.
 
     Paramètres :
-        formule (list) : Liste de clauses représentant une formule 2-SAT.
-        valeurs (list) : Liste des valeurs attribuées aux littéraux.
+        formule (liste) : Liste de clauses représentant une formule 2-SAT.
+        valeurs (liste) : Liste des valeurs attribuées aux littéraux.
 
     Retourne :
         bool : True si la formule est correcte et toutes les variables ont une valeur, False sinon.
@@ -139,7 +143,7 @@ def verifier_formule(formule, valeurs):
     Chaque clause est transformée en deux arêtes selon les implications logiques.
 
     Paramètre :
-        formule (list) : Liste de clauses, chaque clause contenant deux littéraux.
+        formule (liste) : Liste de clauses, chaque clause contenant deux littéraux.
 
     Retourne :
         graphe (DiGraph) : Graphe orienté correspondant à la formule.
@@ -228,9 +232,9 @@ def ajuster_cfc(cfc_ensemble, graphe_principal):
     Paramètres :
         sommet (int) : Le sommet en cours d'exploration.
         num (int) : Le numéro d'ordre de découverte.
-        numero (list) : Liste contenant l'ordre de découverte des sommets.
-        numAccessible (list) : Liste contenant les plus petits numéros accessibles pour chaque sommet.
-        pile (list) : Pile utilisée pour stocker les sommets en cours d'exploration.
+        numero (liste) : Liste contenant l'ordre de découverte des sommets.
+        numAccessible (liste) : Liste contenant les plus petits numéros accessibles pour chaque sommet.
+        pile (liste) : Pile utilisée pour stocker les sommets en cours d'exploration.
         graphe (DiGraph) : Graphe orienté à explorer.
 
     Retourne :
@@ -271,7 +275,7 @@ def parcours(sommet, num, numero, numAccessible, pile, graphe):
         graphe (DiGraph) : Graphe orienté.
 
     Retourne :
-        liste_cfc (list) : Liste des composantes fortement connexes.
+        liste_cfc (liste) : Liste des composantes fortement connexes.
 """
 def tarjan(graphe):
     num = 0
@@ -298,7 +302,7 @@ def tarjan(graphe):
     Vérifie si une formule 2-SAT est satisfiable à partir des composantes fortement connexes.
 
     Paramètre :
-        cfc (list) : Liste des composantes fortement connexes (CFC).
+        cfc (liste) : Liste des composantes fortement connexes (CFC).
 
     Retourne :
         bool : True si la formule est satisfiable, False sinon.
@@ -317,10 +321,10 @@ def est_satisfiable(cfc):
     Associe des valeurs (True ou False) aux littéraux en fonction des composantes fortement connexes (CFC).
 
     Paramètre :
-        cfc (list) : Liste des composantes fortement connexes.
+        cfc (liste) : Liste des composantes fortement connexes.
 
     Retourne :
-        list : Liste des valeurs assignées à chaque littéral (1 pour True, 0 pour False).
+        liste : Liste des valeurs assignées à chaque littéral (1 pour True, 0 pour False).
 """
 def attribuer_valeurs(cfc):
     
@@ -356,7 +360,7 @@ def attribuer_valeurs(cfc):
 
 
 """
-    Teste le fonctionnement complet de la vérification de satisfiabilité pour une formule 2-SAT.
+    Teste le fonctionnement complet de la vérification de satisfiabilité pour une formule 2-SAT (exo5).
     
     Retourne :
         int : 1 si la formule est satisfiable, 0 sinon.
