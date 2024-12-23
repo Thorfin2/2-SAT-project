@@ -108,23 +108,7 @@ Cette fonction :
 
 ---
 
-## Exemple complet d'exécution
 
-1. **Formule donnée** :
-```python
-formule = [[1, 2], [2, -3], [-2, -4], [2, 4], [4, 1]]
-```
-2. **Étapes exécutées** :
-   - Transformation en graphe : `convertir_formule_en_graphe`.
-   - Trouver les CFC : `tarjan`.
-   - Vérification de la satisfiabilité : `est_satisfiable`.
-   - Attribution des valeurs : `attribuer_valeurs`.
-3. **Résultat attendu** :
-```plaintext
-Formule satisfiable avec les valeurs : [None, 1, 0, 1, 0]
-```
-
----
 
 
 ## Remarques
