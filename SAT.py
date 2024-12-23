@@ -72,6 +72,31 @@ def trouver_max(formule):
     return maximum
 
 
+"""
+    Vérifie si la formule est bien formée et si toutes les variables ont une valeur attribuée.
+
+    Paramètres :
+        formule (liste) : Liste de clauses représentant une formule 2-SAT.
+        valeurs (liste) : Liste des valeurs attribuées aux littéraux.
+
+    Retourne :
+        bool : True si la formule est correcte et toutes les variables ont une valeur, False sinon.
+"""
+def verifier_formule(formule, valeurs):
+    if trouver_max(formule) >= len(valeurs):
+        print("Vous n'avez pas attribué de valeur à toutes les variables.")
+        return False
+
+    for clause in formule:
+        for littéral in clause:
+            if littéral > 0:
+                if valeurs[littéral] not in [0, 1]:
+                    print("Les variables doivent avoir des valeurs de 0 ou 1.")
+                    return False
+
+    return True
+
+
 
 """
     Vérifie si une formule 2-SAT est satisfiable avec les valeurs données.
@@ -112,29 +137,7 @@ def verifier_sat(formule, valeurs):
 
 
 
-"""
-    Vérifie si la formule est bien formée et si toutes les variables ont une valeur attribuée.
 
-    Paramètres :
-        formule (liste) : Liste de clauses représentant une formule 2-SAT.
-        valeurs (liste) : Liste des valeurs attribuées aux littéraux.
-
-    Retourne :
-        bool : True si la formule est correcte et toutes les variables ont une valeur, False sinon.
-"""
-def verifier_formule(formule, valeurs):
-    if trouver_max(formule) >= len(valeurs):
-        print("Vous n'avez pas attribué de valeur à toutes les variables.")
-        return False
-
-    for clause in formule:
-        for littéral in clause:
-            if littéral > 0:
-                if valeurs[littéral] not in [0, 1]:
-                    print("Les variables doivent avoir des valeurs de 0 ou 1.")
-                    return False
-
-    return True
 
 #------------------------------------------------Exo4----------------------------------------------#
 
