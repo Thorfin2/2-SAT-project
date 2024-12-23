@@ -129,5 +129,5 @@ Formule satisfiable avec les valeurs : [None, 1, 0, 1, 0]
 
 ## Remarques
 - Les Réponses pour les 2 premiers exercices sont dans le Rapport:  
-[Rapport.pdf](https://github.com/user-attachments/files/18141691/RAPPORT.pdf)
+[Rapport.pdf](https://github.com/user-attachments/files/18141691/Rapport.pdf)
 - L'execution du Fichier  SAT.PY se fera sur Sage Math comme mentionné si dessus.
