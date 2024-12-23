@@ -30,7 +30,7 @@ Ce projet implémente des solutions pour traiter des formules booléennes sous f
 Le problème 2-SAT est une sous-classe du problème SAT, où chaque clause est une disjonction de deux littéraux. L'objectif est de déterminer si la formule est satisfiable, c'est-à-dire si une assignation des variables rend la formule vraie. 
 
 Ce projet repose sur les concepts suivants :
-- **Formules booléennes** : Exprimées en conjonctive normale (CNF).
+- **Formules booléennes** .
 - **Graphes orientés** : Représentation des implications logiques des littéraux.
 - **Algorithme de Tarjan** : Utilisé pour trouver les composantes fortement connexes (CFC).
 
