@@ -6,7 +6,9 @@ ZNATA Mehdi
 
 Sujet :
 [TP-final.pdf](https://github.com/user-attachments/files/18141691/TP-final-2020.pdf)
+
 Questions:
+
 Exercice 1: Soit F une formule 2−Sat avec n variables. Quel est le nombre maximum de clauses que peut comporter F ?
 
 Exercice 2: Donnez un exemple de formule 2−Sat qui n’est pas satisfaisable.
@@ -125,4 +127,7 @@ Formule satisfiable avec les valeurs : [None, 1, 0, 1, 0]
 ---
 
 
-## Conclusion
+## Remarques
+Les Réponses pour les 2 premiers exercices sont dans le Rapport:
+[Rapport.pdf](https://github.com/user-attachments/files/18141691/RAPPORT GRAPHES.pdf)
+L'execution du Fichier  SAT.PY se fera sur Sage Math comme mentionné si dessus.
