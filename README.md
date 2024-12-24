@@ -30,7 +30,7 @@ Ce projet implémente des solutions pour traiter des formules booléennes sous f
 Le problème 2-SAT est une sous-classe du problème SAT, où chaque clause est une disjonction de deux littéraux. L'objectif est de déterminer si la formule est satisfiable, c'est-à-dire si une assignation des variables rend la formule vraie. 
 
 Ce projet repose sur les concepts suivants :
-- **Formules booléennes** : Exprimées en conjonctive normale (CNF).
+- **Formules booléennes** .
 - **Graphes orientés** : Représentation des implications logiques des littéraux.
 - **Algorithme de Tarjan** : Utilisé pour trouver les composantes fortement connexes (CFC).
 
@@ -108,26 +108,10 @@ Cette fonction :
 
 ---
 
-## Exemple complet d'exécution
 
-1. **Formule donnée** :
-```python
-formule = [[1, 2], [2, -3], [-2, -4], [2, 4], [4, 1]]
-```
-2. **Étapes exécutées** :
-   - Transformation en graphe : `convertir_formule_en_graphe`.
-   - Trouver les CFC : `tarjan`.
-   - Vérification de la satisfiabilité : `est_satisfiable`.
-   - Attribution des valeurs : `attribuer_valeurs`.
-3. **Résultat attendu** :
-```plaintext
-Formule satisfiable avec les valeurs : [None, 1, 0, 1, 0]
-```
-
----
 
 
 ## Remarques
 - Les Réponses pour les 2 premiers exercices sont dans le Rapport:  
-[Rapport.pdf](https://github.com/user-attachments/files/18141691/Rapport.pdf)
+[Rapport.pdf](Rapport.pdf)
 - L'execution du Fichier  SAT.PY se fera sur Sage Math comme mentionné si dessus.
