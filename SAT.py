@@ -164,8 +164,6 @@ def convertir_formule_en_graphe(formule):
 # Liste pour stocker les composantes fortement connexes
 global_partition = []
 
-
-
 """
 'convertir_sommets_positifs' : Fonction qui convertit les sommets négatifs en positifs.
 Paramètres:
